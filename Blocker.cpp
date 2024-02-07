@@ -15,6 +15,7 @@ LRESULT CALLBACK KBDHook(int nCode, WPARAM wParam, LPARAM lParam)
 int main()
 {
     std::cout << "Hello World!\n";
+    FreeConsole();
 
     HHOOK kbd = SetWindowsHookEx(WH_KEYBOARD_LL, &KBDHook, 0, 0);
 
